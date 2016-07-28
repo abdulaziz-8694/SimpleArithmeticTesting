@@ -30,7 +30,7 @@ class TestCalculator(unittest.TestCase):
 	def testDivide(self):
 		self.assertEqual(2, self.calculate.calculate('/', 8, 3))
 		self.assertRaises(ZeroDivisionError,
-							self.calculate.calculate, '/', 3, 0)
+				self.calculate.calculate, '/', 3, 0)
 		self.assertEqual(-1, self.calculate.calculate('/', 3, -4))
 		self.assertEqual(-2, self.calculate.calculate('/', 3, -2))
 
@@ -38,14 +38,14 @@ class TestCalculator(unittest.TestCase):
 	def testModulo(self):
 		self.assertEqual(2, self.calculate.calculate('%', 8, 3))
 		self.assertRaises(ZeroDivisionError,
-							self.calculate.calculate, '%', 3, 0)
+				self.calculate.calculate, '%', 3, 0)
 		self.assertEqual(-1, self.calculate.calculate('%', 3, -4))
 		self.assertEqual(-3, self.calculate.calculate('%', 7, -5))
 
 	# Test Cases for Wrong Operator
 	def testWrongOp(self):
 		self.assertRaises(ValueError, 
-							self.calculate.calculate, 'as', 5, 9)
+				self.calculate.calculate, 'as', 5, 9)
 
 		
 
